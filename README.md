@@ -19,7 +19,7 @@ Connect with me for collaboration, job opportunities, or networking
 Gain inspiration for your own portfolio or web projects
 Access dynamic, colourful icons and a modern UI
 
-Tech Stack
+Tech Stack : 
 Next.js (React framework)
 TypeScript
 Tailwind CSS
