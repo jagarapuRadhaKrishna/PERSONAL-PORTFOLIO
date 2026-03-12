@@ -122,7 +122,7 @@ export function Experience() {
                   <div className="flex items-center mb-2">
                     {exp.company.includes("Abilio") && (
                       <Image
-                        src="/companies/new logo abilio.jpeg"
+                        src="/COMPANIES/new logo abilio.jpeg"
                         alt="Abilio IT Solutions Logo"
                         width={40}
                         height={40}
@@ -131,7 +131,7 @@ export function Experience() {
                     )}
                     {exp.company.includes("Internzvalley") && (
                       <Image
-                        src="/companies/INTERNZVALLEy cut logog.png"
+                        src="/COMPANIES/INTERNZVALLEy cut logog.png"
                         alt="Internzvalley Logo"
                         width={40}
                         height={40}
@@ -140,7 +140,7 @@ export function Experience() {
                     )}
                     {exp.company.includes("Corizo") && (
                       <Image
-                        src="/companies/idgJPjoAMv_logos.png"
+                        src="/COMPANIES/idgJPjoAMv_logos.png"
                         alt="Corizo Logo"
                         width={40}
                         height={40}
