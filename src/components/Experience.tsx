@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { type Experience } from "@/types";
 import { Briefcase } from "lucide-react";
+import Image from "next/image";
 
 const experiences: Experience[] = [
   {
@@ -120,23 +121,29 @@ export function Experience() {
                 >
                   <div className="flex items-center mb-2">
                     {exp.company.includes("Abilio") && (
-                      <img
+                      <Image
                         src="/companies/new logo abilio.jpeg"
                         alt="Abilio IT Solutions Logo"
+                        width={40}
+                        height={40}
                         className="w-10 h-10 mr-3 rounded-full"
                       />
                     )}
                     {exp.company.includes("Internzvalley") && (
-                      <img
+                      <Image
                         src="/companies/INTERNZVALLEy cut logog.png"
                         alt="Internzvalley Logo"
+                        width={40}
+                        height={40}
                         className="w-10 h-10 mr-3 rounded-full"
                       />
                     )}
                     {exp.company.includes("Corizo") && (
-                      <img
+                      <Image
                         src="/companies/idgJPjoAMv_logos.png"
                         alt="Corizo Logo"
+                        width={40}
+                        height={40}
                         className="w-10 h-10 mr-3 rounded-full"
                       />
                     )}

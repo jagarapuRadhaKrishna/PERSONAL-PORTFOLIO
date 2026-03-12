@@ -1,45 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Award, ExternalLink } from "lucide-react";
+import { Award } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-
-const certifications = [
-  {
-    id: "1",
-    title: "IBM Software Engineering Professional Certificate",
-    issuer: "IBM",
-    date: "2024",
-    description: "Comprehensive software engineering certification covering full-stack development, cloud computing, and agile methodologies",
-    logo: "/IBM LOGO.webp",
-    images: ["/ibm recoginzation.pdf", "/IBM SOFTWARE ENGINEERING CERTIFICATION.pdf"],
-    credentialUrl: "https://www.ibm.com/training/",
-    skills: ["Software Development", "Cloud Computing", "Agile Methodology", "Full-Stack Development"],
-  },
-  {
-    id: "2",
-    title: "Technology Software Development",
-    issuer: "Citi",
-    date: "2023",
-    description: "Software development certification from Citi focusing on enterprise-grade application development and financial technology solutions",
-    logo: "/citi.gif",
-    images: ["/citi.png"],
-    credentialUrl: "https://www.citi.com/",
-    skills: ["Enterprise Development", "Financial Technology", "System Design", "Software Architecture"],
-  },
-  {
-    id: "3",
-    title: "Python & Data Science Professional Certificate",
-    issuer: "Data Professionals",
-    date: "2023",
-    description: "Advanced Python certification with focus on data science, machine learning, and data analysis",
-    logo: "/datapro.webp",
-    images: ["/java-python.png"],
-    credentialUrl: "https://www.datacamp.com/",
-    skills: ["Python Programming", "Data Science", "Machine Learning", "Data Analysis"],
-  },
-];
+import { certificationsData } from "@/data/certifications";
 
 export default function Certifications() {
   return (
@@ -68,14 +33,14 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="grid gap-6 md:grid-cols-1 lg:grid-cols-3"
         >
-          {certifications.map((cert) => (
+          {certificationsData.map((cert) => (
             <Link key={cert.id} href={`/certifications/${cert.id}`}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 hover:shadow-lg transition-all cursor-pointer h-full flex flex-col"
+                className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden border border-gray-200 dark:border-gray-700 hover:border-blue-500 dark:hover:border-blue-400 transition-all cursor-pointer h-full flex flex-col"
               >
                 {/* Logo Section - Compact */}
                 {cert.logo && (
@@ -93,7 +58,7 @@ export default function Certifications() {
                 {/* Content Section - Compact */}
                 <div className="p-4 flex-1 flex flex-col">
                   {/* Header */}
-                  <div className="mb-3 pb-3 border-b border-gray-200 dark:border-gray-700 flex-1">
+                  <div className="mb-3 pb-3 border-b border-gray-200 dark:border-gray-700">
                     <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1 line-clamp-2">
                       {cert.title}
                     </h3>
@@ -112,7 +77,7 @@ export default function Certifications() {
 
                   {/* Skills - Compact */}
                   {cert.skills && cert.skills.length > 0 && (
-                    <div className="mb-3">
+                    <div className="sticky bottom-0 mb-3 pt-3 pb-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
                       <div className="flex flex-wrap gap-1">
                         {cert.skills.slice(0, 2).map((skill, idx) => (
                           <span

@@ -38,8 +38,11 @@ export interface Certification {
   title: string;
   issuer: string;
   date: string;
-  icon?: string;
+  description: string;
+  logo?: string;
+  images?: string[];
   credentialUrl?: string;
+  skills?: string[];
 }
 
 export interface SocialLink {

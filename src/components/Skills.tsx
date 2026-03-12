@@ -169,9 +169,8 @@ export function Skills() {
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <motion.div
                           initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.proficiency}%` }}
+                          animate={{ width: `${skill.proficiency}%` }}
                           transition={{ duration: 1, delay: 0.2 }}
-                          viewport={{ once: true }}
                           className="bg-blue-600 dark:bg-blue-400 h-full rounded-full"
                         />
                       </div>

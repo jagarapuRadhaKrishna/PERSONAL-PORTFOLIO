@@ -53,7 +53,7 @@ export function Hero() {
         {/* Avatar and Title horizontally centered */}
         <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8">
           <motion.div variants={itemVariants} className="flex-shrink-0 flex justify-center mt-8 md:mt-0">
-            <motion.div className="w-56 h-56 rounded-full overflow-hidden shadow-lg border-4 border-blue-500 dark:border-blue-400">
+            <motion.div className="w-56 h-56 rounded-full overflow-hidden border-4 border-blue-500 dark:border-blue-400">
               <Image
                 src="/mine.jpg"
                 alt="Jagarapu Radha Krishna"
